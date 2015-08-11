@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.jws.WebMethod;
+import javax.jws.WebResult;
 import javax.jws.WebService;
 
 import org.abhishek.business.ProductServiceImpl;
@@ -34,11 +35,8 @@ public class ProductCatalog {
 		return productservice.removeProducts(category, product);
 	}
 	
+	@WebResult(name = "Product")
 	public List<Product> getProductsv2(String category){
 		return productservice.getProductsv2(category);
 	}
-	
-	
 	}
-
-
